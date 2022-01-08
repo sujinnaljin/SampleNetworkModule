@@ -27,11 +27,9 @@
 		631885E527898DE400145129 /* HavitServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E427898DE400145129 /* HavitServiceable.swift */; };
 		631885E727898DF700145129 /* HavitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E627898DF700145129 /* HavitService.swift */; };
 		631885E927898E0F00145129 /* HavitServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E827898E0E00145129 /* HavitServiceEndpoints.swift */; };
-		6318861D27899A2100145129 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 6318861C27899A2100145129 /* RxBlocking */; };
-		6318861F27899A2100145129 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6318861E27899A2100145129 /* RxCocoa */; };
-		6318862127899A2100145129 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6318862027899A2100145129 /* RxRelay */; };
-		6318862327899A2100145129 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6318862227899A2100145129 /* RxSwift */; };
-		6318862527899A2100145129 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 6318862427899A2100145129 /* RxTest */; };
+		6318861A2789999600145129 /* SignInViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631886192789999600145129 /* SignInViewControllerModel.swift */; };
+		631886282789A2B000145129 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 631886272789A2B000145129 /* RxCocoa */; };
+		6318862A2789A2B000145129 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 631886292789A2B000145129 /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +55,7 @@
 		631885E427898DE400145129 /* HavitServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavitServiceable.swift; path = NetworkModule/Extension/HavitServiceable.swift; sourceTree = SOURCE_ROOT; };
 		631885E627898DF700145129 /* HavitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavitService.swift; path = NetworkModule/Extension/HavitService.swift; sourceTree = SOURCE_ROOT; };
 		631885E827898E0E00145129 /* HavitServiceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavitServiceEndpoints.swift; path = NetworkModule/Extension/HavitServiceEndpoints.swift; sourceTree = SOURCE_ROOT; };
+		631886192789999600145129 /* SignInViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewControllerModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6318862527899A2100145129 /* RxTest in Frameworks */,
-				6318862127899A2100145129 /* RxRelay in Frameworks */,
-				6318861F27899A2100145129 /* RxCocoa in Frameworks */,
-				6318862327899A2100145129 /* RxSwift in Frameworks */,
-				6318861D27899A2100145129 /* RxBlocking in Frameworks */,
+				6318862A2789A2B000145129 /* RxSwift in Frameworks */,
+				631886282789A2B000145129 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +96,7 @@
 				631885B227898B4900145129 /* AppDelegate.swift */,
 				631885B427898B4900145129 /* SceneDelegate.swift */,
 				631885B627898B4900145129 /* SignInViewController.swift */,
+				631886192789999600145129 /* SignInViewControllerModel.swift */,
 				631885B827898B4900145129 /* Main.storyboard */,
 				631885BB27898B4C00145129 /* Assets.xcassets */,
 				631885BD27898B4C00145129 /* LaunchScreen.storyboard */,
@@ -168,11 +165,8 @@
 			);
 			name = NetworkModule;
 			packageProductDependencies = (
-				6318861C27899A2100145129 /* RxBlocking */,
-				6318861E27899A2100145129 /* RxCocoa */,
-				6318862027899A2100145129 /* RxRelay */,
-				6318862227899A2100145129 /* RxSwift */,
-				6318862427899A2100145129 /* RxTest */,
+				631886272789A2B000145129 /* RxCocoa */,
+				631886292789A2B000145129 /* RxSwift */,
 			);
 			productName = NetworkModule;
 			productReference = 631885AF27898B4900145129 /* NetworkModule.app */;
@@ -203,7 +197,7 @@
 			);
 			mainGroup = 631885A627898B4900145129;
 			packageReferences = (
-				6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				631886262789A2B000145129 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 631885B027898B4900145129 /* Products */;
 			projectDirPath = "";
@@ -236,6 +230,7 @@
 				631885D227898D5700145129 /* Encodable+Extensions.swift in Sources */,
 				631885E027898D7B00145129 /* APIServiceError.swift in Sources */,
 				631885B727898B4900145129 /* SignInViewController.swift in Sources */,
+				6318861A2789999600145129 /* SignInViewControllerModel.swift in Sources */,
 				631885B327898B4900145129 /* AppDelegate.swift in Sources */,
 				631885DD27898D7B00145129 /* Requestable.swift in Sources */,
 				631885DE27898D7B00145129 /* HttpStatusCode.swift in Sources */,
@@ -470,41 +465,26 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		631886262789A2B000145129 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6318861C27899A2100145129 /* RxBlocking */ = {
+		631886272789A2B000145129 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
-		};
-		6318861E27899A2100145129 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 631886262789A2B000145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		6318862027899A2100145129 /* RxRelay */ = {
+		631886292789A2B000145129 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxRelay;
-		};
-		6318862227899A2100145129 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 631886262789A2B000145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		6318862427899A2100145129 /* RxTest */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

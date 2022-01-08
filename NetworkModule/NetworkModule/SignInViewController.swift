@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class SignInViewController: UIViewController {
     
@@ -18,38 +20,40 @@ class SignInViewController: UIViewController {
     
     private let havitService: HavitServiceable = HavitService(apiService: APIService(),
                                                               environment: .development)
-    
+    let viewModel = SignInViewControllerModel()
+    let disposeBag = DisposeBag()
     
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNextButton()
-        setTextField()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        setTextFieldEmpty()
+        bindInput()
+        bindOutput()
     }
     
     // MARK: - Methods
     // MARK: Custom Method
-    
-    func setNextButton() {
-        nextButton.isEnabled = false
+    private func bindInput() {
+        nameTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.username)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.password)
+            .disposed(by: disposeBag)
+        
+        emailTextField.rx.text
+            .orEmpty
+            .bind(to: viewModel.email)
+            .disposed(by: disposeBag)
     }
     
-    func setTextField() {
-        [nameTextField, emailTextField, passwordTextField].forEach {
-            $0?.delegate = self
-        }
-    }
-    
-    func setTextFieldEmpty() {
-        [nameTextField, emailTextField, passwordTextField].forEach {
-            $0?.text = ""
-        }
+    private func bindOutput() {
+        viewModel.isValid
+            .bind(to: nextButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
     
     // MARK: - IBActions
@@ -66,28 +70,8 @@ class SignInViewController: UIViewController {
 
 // MARK: - Extensions
 
-extension SignInViewController: UITextFieldDelegate {
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        if nameTextField.hasText && emailTextField.hasText && passwordTextField.hasText {
-            nextButton.isEnabled = true
-        } else {
-            nextButton.isEnabled = false
-        }
-    }
-    
-    func textFieldShouldReturn (_ textField: UITextField) -> Bool {
-        switch textField {
-        case nameTextField: emailTextField.becomeFirstResponder()
-        case emailTextField: passwordTextField.becomeFirstResponder()
-        case passwordTextField: passwordTextField.resignFirstResponder()
-        default: break
-        }
-        return true
-    }
-}
-
 extension SignInViewController {
-
+    
     func requestLogin() {
         Task {
             do {
