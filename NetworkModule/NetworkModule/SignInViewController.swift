@@ -16,6 +16,7 @@ class SignInViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var createAccountButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     
     private let havitService: HavitServiceable = HavitService(apiService: APIService(),
@@ -48,6 +49,15 @@ class SignInViewController: UIViewController {
             .orEmpty
             .bind(to: viewModel.email)
             .disposed(by: disposeBag)
+        
+        //TODO: coordinator 로 빼면 VM 쪽에 있어야할 듯
+        createAccountButton.rx.tap
+            .bind(onNext: { _ in
+                let signUpViewController = UIViewController()
+                signUpViewController.view.backgroundColor = .red
+                self.navigationController?.pushViewController(signUpViewController, animated: true)
+            })
+            .disposed(by: disposeBag)
     }
     
     private func bindOutput() {
@@ -57,12 +67,6 @@ class SignInViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    
-    @IBAction func createAccountButtonDidTap(_ sender: UIButton) {
-        guard let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") else {return}
-        self.navigationController?.pushViewController(signUpVC, animated: true)
-    }
-    
     @IBAction func nextButtonDidTap(_ sender: UIButton) {
         requestLogin()
     }

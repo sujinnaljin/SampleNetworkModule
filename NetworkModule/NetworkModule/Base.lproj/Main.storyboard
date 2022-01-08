@@ -55,9 +55,6 @@
                                 <state key="normal" title="계정 만들기">
                                     <color key="titleColor" name="googleblue"/>
                                 </state>
-                                <connections>
-                                    <action selector="createAccountButtonDidTap:" destination="NrZ-Ur-U87" eventType="touchUpInside" id="bxD-cs-Abt"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JaI-uJ-a8H">
                                 <rect key="frame" x="44" y="213" width="287" height="46"/>
@@ -134,6 +131,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="lgn-7W-mJu"/>
                     <connections>
+                        <outlet property="createAccountButton" destination="F3a-90-G2S" id="F8p-oD-nc2"/>
                         <outlet property="emailTextField" destination="VPP-ml-oxU" id="lhv-dr-ir2"/>
                         <outlet property="nameTextField" destination="tTt-5A-gAv" id="LHP-jx-k76"/>
                         <outlet property="nextButton" destination="CDC-sT-fWe" id="BdU-hh-b3g"/>
