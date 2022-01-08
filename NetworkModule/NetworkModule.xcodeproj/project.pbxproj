@@ -27,6 +27,11 @@
 		631885E527898DE400145129 /* HavitServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E427898DE400145129 /* HavitServiceable.swift */; };
 		631885E727898DF700145129 /* HavitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E627898DF700145129 /* HavitService.swift */; };
 		631885E927898E0F00145129 /* HavitServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E827898E0E00145129 /* HavitServiceEndpoints.swift */; };
+		6318861D27899A2100145129 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 6318861C27899A2100145129 /* RxBlocking */; };
+		6318861F27899A2100145129 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 6318861E27899A2100145129 /* RxCocoa */; };
+		6318862127899A2100145129 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 6318862027899A2100145129 /* RxRelay */; };
+		6318862327899A2100145129 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6318862227899A2100145129 /* RxSwift */; };
+		6318862527899A2100145129 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = 6318862427899A2100145129 /* RxTest */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +64,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6318862527899A2100145129 /* RxTest in Frameworks */,
+				6318862127899A2100145129 /* RxRelay in Frameworks */,
+				6318861F27899A2100145129 /* RxCocoa in Frameworks */,
+				6318862327899A2100145129 /* RxSwift in Frameworks */,
+				6318861D27899A2100145129 /* RxBlocking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +167,13 @@
 			dependencies = (
 			);
 			name = NetworkModule;
+			packageProductDependencies = (
+				6318861C27899A2100145129 /* RxBlocking */,
+				6318861E27899A2100145129 /* RxCocoa */,
+				6318862027899A2100145129 /* RxRelay */,
+				6318862227899A2100145129 /* RxSwift */,
+				6318862427899A2100145129 /* RxTest */,
+			);
 			productName = NetworkModule;
 			productReference = 631885AF27898B4900145129 /* NetworkModule.app */;
 			productType = "com.apple.product-type.application";
@@ -185,6 +202,9 @@
 				Base,
 			);
 			mainGroup = 631885A627898B4900145129;
+			packageReferences = (
+				6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 631885B027898B4900145129 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -448,6 +468,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6318861C27899A2100145129 /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxBlocking;
+		};
+		6318861E27899A2100145129 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		6318862027899A2100145129 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		6318862227899A2100145129 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		6318862427899A2100145129 /* RxTest */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6318861B27899A2100145129 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxTest;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 631885A727898B4900145129 /* Project object */;
 }
