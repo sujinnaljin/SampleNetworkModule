@@ -11,4 +11,5 @@ enum APIServiceError: Error {
     case urlEncodingError
     case clientError(message: String?)
     case serverError
+    case unknown
 }

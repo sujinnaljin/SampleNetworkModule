@@ -12,20 +12,16 @@ import RxCocoa
 class SignInViewController: UIViewController {
     
     // MARK: - IBOutlets
-    
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var createAccountButton: UIButton!
     @IBOutlet var nextButton: UIButton!
     
-    private let havitService: HavitServiceable = HavitService(apiService: APIService(),
-                                                              environment: .development)
     let viewModel = SignInViewControllerModel()
     let disposeBag = DisposeBag()
     
     // MARK: - Life Cycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         bindInput()
@@ -58,44 +54,25 @@ class SignInViewController: UIViewController {
                 self.navigationController?.pushViewController(signUpViewController, animated: true)
             })
             .disposed(by: disposeBag)
+        
+        nextButton.rx.tap
+            .bind(onNext: { [weak self] _ in
+                self?.viewModel.login()
+            })
+            .disposed(by: disposeBag)
     }
     
     private func bindOutput() {
         viewModel.isValid
             .bind(to: nextButton.rx.isEnabled)
             .disposed(by: disposeBag)
-    }
-    
-    // MARK: - IBActions
-    @IBAction func nextButtonDidTap(_ sender: UIButton) {
-        requestLogin()
-    }
-}
-
-// MARK: - Extensions
-
-extension SignInViewController {
-    
-    func requestLogin() {
-        Task {
-            do {
-                let user = User(email: "email@naver.com", password: "password", address: "address")
-                let token = try await havitService.login(user:user)
-                // 성공
-                print(token)
-            } catch APIServiceError.serverError {
-                // 에러 처리
-                print("serverError")
-            } catch APIServiceError.clientError(let message) {
-                // 에러 처리
-                print("clientError: \(message)")
-                print(message)
-            } catch let error {
-                // 디코딩 에러
-                if error is DecodingError {
-                    print("decoding error")
-                }
+        
+        viewModel.errorMessage
+            .asDriver(onErrorJustReturn: "")
+            .drive { [weak self] errorMessage in
+                self?.showAlert(title: "에러", message: errorMessage)
+                
             }
-        }
+            .disposed(by: disposeBag)
     }
 }

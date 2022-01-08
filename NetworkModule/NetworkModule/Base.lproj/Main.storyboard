@@ -97,9 +97,6 @@
                                     <fontDescription key="titleFontDescription" name="SFProDisplay-Medium" family="SF Pro Display" pointSize="14"/>
                                     <color key="baseBackgroundColor" name="googleblue"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <action selector="nextButtonDidTap:" destination="NrZ-Ur-U87" eventType="touchUpInside" id="9PY-tl-7xm"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="L6U-3o-cYF"/>
