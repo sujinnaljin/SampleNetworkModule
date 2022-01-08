@@ -13,6 +13,20 @@
 		631885BA27898B4900145129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631885B827898B4900145129 /* Main.storyboard */; };
 		631885BC27898B4C00145129 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 631885BB27898B4C00145129 /* Assets.xcassets */; };
 		631885BF27898B4C00145129 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 631885BD27898B4C00145129 /* LaunchScreen.storyboard */; };
+		631885C927898C2700145129 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885C827898C2700145129 /* BaseModel.swift */; };
+		631885CB27898C3100145129 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885CA27898C3100145129 /* Post.swift */; };
+		631885CD27898C3E00145129 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885CC27898C3E00145129 /* User.swift */; };
+		631885D227898D5700145129 /* Encodable+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885D127898D5700145129 /* Encodable+Extensions.swift */; };
+		631885DC27898D7B00145129 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885D527898D7A00145129 /* APIService.swift */; };
+		631885DD27898D7B00145129 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885D627898D7B00145129 /* Requestable.swift */; };
+		631885DE27898D7B00145129 /* HttpStatusCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885D727898D7B00145129 /* HttpStatusCode.swift */; };
+		631885DF27898D7B00145129 /* APIEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885D827898D7B00145129 /* APIEnvironment.swift */; };
+		631885E027898D7B00145129 /* APIServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885D927898D7B00145129 /* APIServiceError.swift */; };
+		631885E127898D7B00145129 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885DA27898D7B00145129 /* NetworkRequest.swift */; };
+		631885E227898D7B00145129 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885DB27898D7B00145129 /* HttpMethod.swift */; };
+		631885E527898DE400145129 /* HavitServiceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E427898DE400145129 /* HavitServiceable.swift */; };
+		631885E727898DF700145129 /* HavitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E627898DF700145129 /* HavitService.swift */; };
+		631885E927898E0F00145129 /* HavitServiceEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631885E827898E0E00145129 /* HavitServiceEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +38,20 @@
 		631885BB27898B4C00145129 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		631885BE27898B4C00145129 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		631885C027898B4C00145129 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		631885C827898C2700145129 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		631885CA27898C3100145129 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		631885CC27898C3E00145129 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		631885D127898D5700145129 /* Encodable+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+Extensions.swift"; sourceTree = "<group>"; };
+		631885D527898D7A00145129 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		631885D627898D7B00145129 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		631885D727898D7B00145129 /* HttpStatusCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpStatusCode.swift; sourceTree = "<group>"; };
+		631885D827898D7B00145129 /* APIEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIEnvironment.swift; sourceTree = "<group>"; };
+		631885D927898D7B00145129 /* APIServiceError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIServiceError.swift; sourceTree = "<group>"; };
+		631885DA27898D7B00145129 /* NetworkRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		631885DB27898D7B00145129 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		631885E427898DE400145129 /* HavitServiceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavitServiceable.swift; path = NetworkModule/Extension/HavitServiceable.swift; sourceTree = SOURCE_ROOT; };
+		631885E627898DF700145129 /* HavitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavitService.swift; path = NetworkModule/Extension/HavitService.swift; sourceTree = SOURCE_ROOT; };
+		631885E827898E0E00145129 /* HavitServiceEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HavitServiceEndpoints.swift; path = NetworkModule/Extension/HavitServiceEndpoints.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,9 @@
 		631885B127898B4900145129 /* NetworkModule */ = {
 			isa = PBXGroup;
 			children = (
+				631885D027898D4600145129 /* Extension */,
+				631885C727898C1F00145129 /* Model */,
+				631885D427898D6D00145129 /* Service */,
 				631885B227898B4900145129 /* AppDelegate.swift */,
 				631885B427898B4900145129 /* SceneDelegate.swift */,
 				631885B627898B4900145129 /* ViewController.swift */,
@@ -65,6 +96,49 @@
 				631885C027898B4C00145129 /* Info.plist */,
 			);
 			path = NetworkModule;
+			sourceTree = "<group>";
+		};
+		631885C727898C1F00145129 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				631885C827898C2700145129 /* BaseModel.swift */,
+				631885CA27898C3100145129 /* Post.swift */,
+				631885CC27898C3E00145129 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		631885D027898D4600145129 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				631885D127898D5700145129 /* Encodable+Extensions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		631885D427898D6D00145129 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				631885DB27898D7B00145129 /* HttpMethod.swift */,
+				631885D727898D7B00145129 /* HttpStatusCode.swift */,
+				631885D827898D7B00145129 /* APIEnvironment.swift */,
+				631885D927898D7B00145129 /* APIServiceError.swift */,
+				631885DA27898D7B00145129 /* NetworkRequest.swift */,
+				631885D627898D7B00145129 /* Requestable.swift */,
+				631885D527898D7A00145129 /* APIService.swift */,
+				631885E327898DC900145129 /* Havit */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		631885E327898DC900145129 /* Havit */ = {
+			isa = PBXGroup;
+			children = (
+				631885E827898E0E00145129 /* HavitServiceEndpoints.swift */,
+				631885E427898DE400145129 /* HavitServiceable.swift */,
+				631885E627898DF700145129 /* HavitService.swift */,
+			);
+			path = Havit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +212,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				631885E127898D7B00145129 /* NetworkRequest.swift in Sources */,
+				631885D227898D5700145129 /* Encodable+Extensions.swift in Sources */,
+				631885E027898D7B00145129 /* APIServiceError.swift in Sources */,
 				631885B727898B4900145129 /* ViewController.swift in Sources */,
 				631885B327898B4900145129 /* AppDelegate.swift in Sources */,
+				631885DD27898D7B00145129 /* Requestable.swift in Sources */,
+				631885DE27898D7B00145129 /* HttpStatusCode.swift in Sources */,
+				631885CD27898C3E00145129 /* User.swift in Sources */,
+				631885E527898DE400145129 /* HavitServiceable.swift in Sources */,
+				631885C927898C2700145129 /* BaseModel.swift in Sources */,
+				631885E727898DF700145129 /* HavitService.swift in Sources */,
+				631885DF27898D7B00145129 /* APIEnvironment.swift in Sources */,
+				631885E227898D7B00145129 /* HttpMethod.swift in Sources */,
+				631885E927898E0F00145129 /* HavitServiceEndpoints.swift in Sources */,
 				631885B527898B4900145129 /* SceneDelegate.swift in Sources */,
+				631885DC27898D7B00145129 /* APIService.swift in Sources */,
+				631885CB27898C3100145129 /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
