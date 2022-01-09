@@ -28,10 +28,14 @@ enum HavitServiceEndpoints {
     }
     
     // encodable request body for POST
-    var requestBody: Encodable? {
+    var requestBody: Data? {
         switch self {
         case .login(let user):
-            return user
+            let parameters = ["email": user.email,
+                              "password": user.password,
+                              "address": user.address]
+            // or you can use as user.encode()
+            return parameters.encode()
         default:
             return nil
         }

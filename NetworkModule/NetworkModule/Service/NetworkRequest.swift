@@ -16,19 +16,6 @@ struct NetworkRequest {
     
     init(url: String,
          headers: [String: String]? = nil,
-         reqBody: Encodable? = nil,
-         reqTimeout: Float? = nil,
-         httpMethod: HTTPMethod
-    ) {
-        self.url = url
-        self.headers = headers
-        self.body = reqBody?.encode()
-        self.requestTimeOut = reqTimeout
-        self.httpMethod = httpMethod
-    }
-    
-    init(url: String,
-         headers: [String: String]? = nil,
          reqBody: Data? = nil,
          reqTimeout: Float? = nil,
          httpMethod: HTTPMethod
